@@ -1,4 +1,6 @@
 // sender file
 
-export const heading = 'Kaha se aaye ho tmmmm';
-export const heading2 = heading.substring(0,15)
+export const clothes = 'Clothes';
+export const utensils = 'Kitchen items..'
+export const table ="It is vishal table"
+export const myShoes = "This box have multiple shoes"

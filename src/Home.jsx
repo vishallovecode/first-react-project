@@ -1,16 +1,19 @@
 
 import './App.css';
-import { heading, heading2 } from './constant';
+import { clothes , myShoes } from './constant';
+import ButtonHaYar from  './button'
 
 // receiver  file 
 function Home() {
-  console.log('Hurrah ... we are consoling some thing...')
-
+ 
   return (
     <div className="App">
-      <h1>{heading}</h1>
-      <h2>{heading2}</h2>
+      <h1>{myShoes}</h1>
+      <h2>{clothes}</h2>
       <h1>AAO Sikhe React..🥵</h1>
+      {/* Button Component */}
+      <ButtonHaYar/> 
+    
     </div>
   );
 }
