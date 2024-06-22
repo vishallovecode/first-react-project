@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client'; // library
 import './index.css';
-import Home from './Home';
+import App from './App';
 
 // react  we need to use react-dom
 const rootElem = document.getElementById('myfirstreactProject')
 const root = ReactDOM.createRoot(rootElem);
-root.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>
-);
+root.render(<App />); // html or componet
 
+// html code or i can give react component
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
