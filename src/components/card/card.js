@@ -9,21 +9,37 @@ const Card = () => {
   let btnText = 'Click Me'; // this is normal variable  , if  this value got change there will be no componenet re-render happen
   // buttonText is state variable  , whenever this buttonText get change then ui will updated because re-render
   const [buttonText , setButtonText] = useState('Click Me123') // 
+  const [description ,setDescription] = useState('This is short description about the card')
+  const [showCard , setShowCard]= useState(true)
 
   function handleClick() {
     btnText = 'Updated' // this will not re-render the component ui will not updated
     setButtonText('Updated here..') // state updated now your component will re-render , ui will updated
   }
+  const changeDescription = () => {
+    setDescription('Just relax its very easy , focus more,,,')
+  }
+  // You can conditionally render jsx
+
+  function hideCard () {
+    setShowCard(false) // it is updating the showCard to false  , ui will re-render
+  }
+
   return  (
     <div className="card">
       <div className="img-cont">
         <img src = 'https://st.adda247.com/https://storeimages.adda247.com/39371716365652.png?tr=w-undefined'/>
       </div>
+   
       <div>
         <h2>Heading</h2>
-        <span>This is short description about the card</span>
+       { 
+       showCard ? <span>{description}</span> : null
+       }
         <button onClick={handleClick}>{buttonText}</button> 
-        {/* Create a button change description once click that chan ge the description of span tag */}
+        
+        <button onClick={changeDescription}>Change Description</button>
+        <button onClick={hideCard}>Hide Description</button>
       </div>
       <Button/>
     </div>
@@ -32,7 +48,7 @@ const Card = () => {
 export default Card;
 
 
-
+//  ctrl+ ?/
 // JSX
 // STATE 
 // PROPS 
