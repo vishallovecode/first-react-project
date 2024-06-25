@@ -11,6 +11,10 @@ const Card = () => {
   const [buttonText , setButtonText] = useState('Click Me123') // 
   const [description ,setDescription] = useState('This is short description about the card')
   const [showCard , setShowCard]= useState(true)
+  const [images , setImages] = useState(['https://st.adda247.com/https://storeimages.adda247.com/CompleteFoundationBatch1717742640.png?tr=w-250' , 'https://st.adda247.com/https://storeimages.adda247.com/39371716365652.png?tr=w-undefined' , 'https://st.adda247.com/https://storeimages.adda247.com/AdhyyanCurrentAffarisGautamSirApril2024HindiStore1715751288.png?tr=w-250' , 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'])
+  const [img , setImage] = useState(images[0])
+  const [count , setCount] = useState(0);
+   // 0 , 1 , 2 ,3 
 
   function handleClick() {
     btnText = 'Updated' // this will not re-render the component ui will not updated
@@ -25,10 +29,19 @@ const Card = () => {
     setShowCard(false) // it is updating the showCard to false  , ui will re-render
   }
 
+  function changeImage () {
+    let updatedCount =  count +1;
+    if(updatedCount < images.length) {
+      setCount(updatedCount)
+      setImage(images[updatedCount])
+    }
+
+  }
+
   return  (
     <div className="card">
-      <div className="img-cont">
-        <img src = 'https://st.adda247.com/https://storeimages.adda247.com/39371716365652.png?tr=w-undefined'/>
+      <div className="img-cont" onClick={changeImage}>
+        <img src = {img}/>
       </div>
    
       <div>
@@ -40,6 +53,7 @@ const Card = () => {
         
         <button onClick={changeDescription}>Change Description</button>
         <button onClick={hideCard}>Hide Description</button>
+        <button onClick={changeImage} >Change image</button>
       </div>
       <Button/>
     </div>
@@ -87,5 +101,8 @@ export default Card;
 
 
 // // const [a1 , setA1] = useState('Ramji'); // [data , setData]
+
+
+
 
 
