@@ -6,11 +6,13 @@ import './card.css' // importing the css file
 const Card = () => {
   // Play with JSX 
   // hooks useState
-  let btnText = 'Click Me';
+  let btnText = 'Click Me'; // this is normal variable  , if  this value got change there will be no componenet re-render happen
+  // buttonText is state variable  , whenever this buttonText get change then ui will updated because re-render
   const [buttonText , setButtonText] = useState('Click Me123') // 
+
   function handleClick() {
-    btnText = 'Updated'
-    setButtonText('Updated here..')
+    btnText = 'Updated' // this will not re-render the component ui will not updated
+    setButtonText('Updated here..') // state updated now your component will re-render , ui will updated
   }
   return  (
     <div className="card">
@@ -20,7 +22,7 @@ const Card = () => {
       <div>
         <h2>Heading</h2>
         <span>This is short description about the card</span>
-        <button onClick={handleClick}>{buttonText}</button>
+        <button onClick={handleClick}>{buttonText}</button> 
         {/* Create a button change description once click that chan ge the description of span tag */}
       </div>
       <Button/>
@@ -62,12 +64,12 @@ export default Card;
 //     data =  updatedValue
 //       console.log(data)
 //   }
-//   return [data , setData]
+//   return [data , setData] 
 // }
 
 
 
 
-// const [a1 , setA1] = useState('Ramji');
+// // const [a1 , setA1] = useState('Ramji'); // [data , setData]
 
 
