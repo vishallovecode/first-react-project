@@ -52,13 +52,13 @@ const Card = () => {
        { 
        showCard ? <span>{description}</span> : null
        }
-        <button onClick={handleClick}>{buttonText}</button> 
+        {/* <button onClick={handleClick}>{buttonText}</button> 
         
         <button onClick={changeDescription}>Change Description</button>
         <button onClick={hideCard}>Hide Description</button>
-        <button onClick={changeImage} >Change image</button>
+        <button onClick={changeImage} >Change image</button> */}
       </div>
-      <Button/>
+      <Button buttonText="Continue"/>
     </div>
   )
 }

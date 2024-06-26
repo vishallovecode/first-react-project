@@ -3,7 +3,7 @@
 function Button (props) { 
   const {buttonText , handleClick , classes} = props;
   return   ( 
-  <button className={classes ? classes : 'button'} onClick={handleClick}>{buttonText}</button> 
+     <button className={classes ? classes : 'button'} onClick={handleClick}>{buttonText}</button> 
   )
 }
 
