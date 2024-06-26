@@ -1,9 +1,10 @@
 
 import './App.css';
-import Button from './button';
+
 
 import   Sqaure from './components/Square';
 import Card from './components/card/card';
+import Counter from './components/counter';
   '../../'
 // receive  file 
 function App() {
@@ -11,8 +12,8 @@ function App() {
     <div className="App">
       {/* <Sqaure>Hey</Sqaure> */}
       <div>
-      <Button/>
       <Card/>
+      <Counter/>
       </div>
     </div>
   );

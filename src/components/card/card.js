@@ -1,7 +1,9 @@
 
-import { useState } from 'react';
-import Button from '../../button';  // importing things from jsx or js file
+import { useState } from 'react'; // named export
+ // importing things from jsx or js file
 import './card.css' // importing the css file 
+import Button from '../button';
+
 
 const Card = () => {
   // Play with JSX 
@@ -11,6 +13,7 @@ const Card = () => {
   const [buttonText , setButtonText] = useState('Click Me123') // 
   const [description ,setDescription] = useState('This is short description about the card')
   const [showCard , setShowCard]= useState(true)
+
   const [images , setImages] = useState(['https://st.adda247.com/https://storeimages.adda247.com/CompleteFoundationBatch1717742640.png?tr=w-250' , 'https://st.adda247.com/https://storeimages.adda247.com/39371716365652.png?tr=w-undefined' , 'https://st.adda247.com/https://storeimages.adda247.com/AdhyyanCurrentAffarisGautamSirApril2024HindiStore1715751288.png?tr=w-250' , 'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'])
   const [img , setImage] = useState(images[0])
   const [count , setCount] = useState(0);
@@ -105,4 +108,14 @@ export default Card;
 
 
 
+
+
+
+// State => The state is the variable which store the value , and which is belongs to the component  , and you can create state inside component 
+// using useState hooks , and if your state value is updated then your component will re-render
+
+//  Earlier before react version 16.8 state can be defined only inside the class component , in 16.8 react
+// introduced new concepts call hooks  , using that we can defined state inside the function component as well 
+// the hook are nothing it a normal function which have starting key as use
+ 
 
