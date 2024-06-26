@@ -1,9 +1,9 @@
 
 
 function Button (props) { 
-  const {buttonText} = props;
+  const {buttonText , handleClick , classes} = props;
   return   ( 
-  <button className='button'>{buttonText}</button> 
+  <button className={classes ? classes : 'button'} onClick={handleClick}>{buttonText}</button> 
   )
 }
 
@@ -13,3 +13,30 @@ function Button (props) {
 export default Button
 
 // Univers
+
+
+
+// function GrandChild (props) {
+//   const {a1 ,b1} = props;
+//   return  (
+//     <div> {a1+ b1}</div>
+//   )
+// }
+
+// function Child (props) {
+//   const  {a , b} = props;
+//   return  (
+//     <div>
+//       <GrandChild a1= {a} b1= {b}/>
+//     </div>
+//   )
+// }
+
+
+// function Parent() {
+//   return  (
+//     <Child a= {20} b= {30}/>
+//   )
+// }
+
+

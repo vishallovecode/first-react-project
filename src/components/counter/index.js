@@ -19,11 +19,24 @@ function Counter () {
       {/* <button onClick={increment}>
         Increment
       </button> */}
-        <Button buttonText="Increment"/>
-        <Button buttonText="Decrement"/>
+        <Button buttonText="Increment" handleClick= {increment} classes="light"/>
+        <Button buttonText="Decrement" handleClick= {decremenet}/>
       <span>
         Count: {count}
       </span>
+
+
+      {/* <button>Click Me</button> */}
+      {/* <Button buttonText="Click Me"/> */}
+
+      {/* <button>Hover me</button> */}
+      {/* <Button buttonText="Hover me"/> */}
+
+      {/* <button>Touch Me</button> */}
+      {/* <Button buttonText="Touch Me"/> */}
+
+      {/* <button>Dafa ho jao</button>    */}
+      {/* <Button buttonText="Dafa ho jao"/> */}
     </div>
   )
 }
