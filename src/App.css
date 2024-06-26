@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   background-color: #D4D4D3;
   height: 500px;
+  flex-direction: row;
 }
 
 .App-logo {
