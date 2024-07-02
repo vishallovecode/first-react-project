@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 // react  we need to use react-dom
-const rootElem = document.getElementById('myfirstreactProject')
+const rootElem = document.getElementById('root')
 const root = ReactDOM.createRoot(rootElem);
 root.render(<App />); // html or componet
 
