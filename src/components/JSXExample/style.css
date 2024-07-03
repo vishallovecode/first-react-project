@@ -1,3 +1,8 @@
+
+.container {
+  display: flex;
+  gap: 20px;
+}
 #outer1 {
   width: 800px;
   height: 800px;
@@ -54,4 +59,11 @@
 }
 .bg-green {
   background-color: green;
+}
+
+
+.btn-cont {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
