@@ -73,23 +73,23 @@ function JSXExample(props) {
 
   function handleOuter1() {
     const updatedShows = {...shows};
-    updatedShows.outer1 =  false
+    updatedShows.outer1 =  !updatedShows.outer1
     setShows(updatedShows);
   }
   function handleOuter2() {
     const updatedShows = {...shows};
-    updatedShows.outer2 =  false
+    updatedShows.outer2 =  !updatedShows.outer2
     setShows(updatedShows);
   }
   function handleInner1() {
     const updatedShows = {...shows};
-    updatedShows.inner1 =  false
+    updatedShows.inner1 =  !updatedShows.inner1
     setShows(updatedShows);
   }
 
   function handleInner2() {
     const updatedShows = {...shows};
-    updatedShows.inner2 =  false
+    updatedShows.inner2 =  !updatedShows.inner2 
     setShows(updatedShows);
   }
   return (
@@ -115,15 +115,17 @@ function JSXExample(props) {
         </div>
       ) : null}
       <div className="btn-cont">
-        <Button buttonText="Outer Swap" handleClick={outerSwap} />
-        <Button buttonText="Inner Swap" handleClick={innerSwap} />
-        <Button buttonText="Hide Outer1" handleClick={handleOuter1} />
-        <Button buttonText="Hide outer2 " handleClick={handleOuter2} />
-        <Button buttonText="Hide Inner1" handleClick={handleInner1} />
-        <Button buttonText="Hide Inner2" handleClick={handleInner2} />
+        <Button buttonText={`Outer Swap`} handleClick={outerSwap} />
+        <Button buttonText={`Inner Swap`} handleClick={innerSwap} />
+        <Button buttonText={`${shows.outer1 ? 'Hide': 'Show'} Outer1`} handleClick={handleOuter1} />
+        <Button buttonText={`${shows.outer2 ? 'Hide': 'Show'} outer2`} handleClick={handleOuter2} />
+        <Button buttonText={`${shows.inner1 ? 'Hide': 'Show'} Inner1`} handleClick={handleInner1} />
+        <Button buttonText={`${shows.inner2 ? 'Hide': 'Show'} Inner2`} handleClick={handleInner2} />
       </div>
     </div>
   );
 }
 
 export default JSXExample;
+
+
