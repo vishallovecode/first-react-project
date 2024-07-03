@@ -8,15 +8,18 @@ import './style.css'
 
 function JSXExample(props) {
 //  Create state here
+console.log('Rendering started.....')
 const initialColors = {outer1: '' ,  outer2: '', inner1:'' , inner2: '' };
 const [colors , setColors] = useState(initialColors)
 // const [colors , setColors] = useState({outer1: '' ,  outer2: '', inner1:'' , inner2: '' })
 
   function handleClick (event) {
-    const updatedColors = {...colors}; // created one object
+    const updatedColors = {...colors}; // created one object  // {}
+
     if(event.target.id == 'inner1') {
       //  Write your code here
-      updatedColors[event.target.id]  = 'bg-yellow'
+      // updatedColors[event.target.id]  = 'bg-yellow'
+      updatedColors['inner1']  = 'bg-yellow'
     }
     else if(event.target.id == 'inner2') {
       updatedColors[event.target.id]  = 'bg-green'
@@ -27,7 +30,7 @@ const [colors , setColors] = useState(initialColors)
     else {
       updatedColors[event.target.id]  = 'bg-red'
     }
-    setColors(updatedColors);  
+    setColors(updatedColors);   // {outer1: '' ,  outer2: '', inner1:'bg-yellow' , inner2: '' };
   }
   return  (
     <div>
