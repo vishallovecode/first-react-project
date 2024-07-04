@@ -5,7 +5,6 @@
 import { useState } from "react";
 import "./style.css";
 import Button from "../button";
-
 function JSXExample(props) {
   //  Create state here
   // if component re-render your state will not initialized it will persist the value;
@@ -96,7 +95,8 @@ function JSXExample(props) {
     <div className="container">
       {/* <h2>{heading}</h2> */}
       {/* bg-yellow */}
-      {shows.outer1 ? (
+      {
+      shows.outer1 ? (
         <div id="outer1" onClick={handleClick} className={colors.outer1}>
           {/* bg-black */}
           {shows.outer2 ? (
@@ -113,7 +113,8 @@ function JSXExample(props) {
             </div>
           ) : null}
         </div>
-      ) : null}
+      ) : null
+      }
       <div className="btn-cont">
         <Button buttonText={`Outer Swap`} handleClick={outerSwap} />
         <Button buttonText={`Inner Swap`} handleClick={innerSwap} />
@@ -125,7 +126,6 @@ function JSXExample(props) {
     </div>
   );
 }
-
 export default JSXExample;
 
 
