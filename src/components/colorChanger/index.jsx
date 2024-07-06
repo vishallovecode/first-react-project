@@ -6,8 +6,8 @@ import  './style.css'
 function  ThemeChanger (props) {
   const [styles , setStyle]= useState({
     backgroundColor:'',
-    border: '',
-    coolor: ''
+    borderColor: '',
+    color: ''
   })
 
   const [inputValues , setInputValues]= useState({
@@ -37,17 +37,17 @@ function  ThemeChanger (props) {
   function bgChange(){
     const updatedStyle = {...styles};
     updatedStyle.backgroundColor =  inputValues.bg
-    setInputValues(updatedStyle)
+    setStyle(updatedStyle)
   }
   function borderChange(){
     const updatedStyle = {...styles};
-    updatedStyle.border =  inputValues.border
-    setInputValues(updatedStyle)
+    updatedStyle.borderColor =  inputValues.border
+    setStyle(updatedStyle)
   }
   function colorChange(){
     const updatedStyle = {...styles};
-    updatedStyle.color =  inputValues.color
-    setInputValues(updatedStyle)
+    updatedStyle.color =  inputValues.color;
+    setStyle(updatedStyle)
   }
   return  (
     <div className="container">
@@ -72,3 +72,6 @@ function  ThemeChanger (props) {
 
 
 export default ThemeChanger;
+
+
+
