@@ -1,0 +1,21 @@
+
+.box {
+  height: 500px;
+  width: 500px;
+  border-radius: 10px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  justify-content: center;
+}
+.sub-container {
+  display: flex;
+  gap: 30px;
+}

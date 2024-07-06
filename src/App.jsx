@@ -5,6 +5,7 @@ import JSXExample from './components/JSXExample/jsxexample';
 
 import   Sqaure from './components/Square';
 import Card from './components/card/card';
+import ThemeChanger from './components/colorChanger';
 import Counter from './components/counter';
 import CustomCard from './components/customcard';
 import InlineStyling from './components/inlineStyle';
@@ -31,7 +32,8 @@ function App() {
       <CustomCard img={"https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg"} description={"Chalo sikh lia ha props"} heading={'Kya aya samja props me??'}/> */}
       {/* <JSXExample/> */}
       {/* <InlineStyling/> */}
-      <Timer/>
+      {/* <Timer/> */}
+      <ThemeChanger/>
     </div>
   );
 }
