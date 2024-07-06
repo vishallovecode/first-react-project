@@ -8,6 +8,7 @@ import Card from './components/card/card';
 import Counter from './components/counter';
 import CustomCard from './components/customcard';
 import InlineStyling from './components/inlineStyle';
+import Timer from './components/timer';
 
 // receive  file 
 function App() {
@@ -29,7 +30,8 @@ function App() {
 
       <CustomCard img={"https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg"} description={"Chalo sikh lia ha props"} heading={'Kya aya samja props me??'}/> */}
       {/* <JSXExample/> */}
-      <InlineStyling/>
+      {/* <InlineStyling/> */}
+      <Timer/>
     </div>
   );
 }

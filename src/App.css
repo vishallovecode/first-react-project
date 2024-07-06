@@ -2,7 +2,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  background-color: #D4D4D3;
+  /* background-color: #D4D4D3; */
   height: 500px;
   flex-direction: row;
 }
