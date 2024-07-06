@@ -1,9 +1,9 @@
 
 
 function Button (props) { 
-  const {buttonText , handleClick , classes} = props;
+  const {buttonText , handleClick , classes , isDisable} = props;
   return   ( 
-     <button className={classes ? classes : 'button'} onClick={handleClick}>{buttonText}</button> 
+     <button   className={ `button ${classes}`} onClick={handleClick}>{buttonText}</button> 
   )
 }
 

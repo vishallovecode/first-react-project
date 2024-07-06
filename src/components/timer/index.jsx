@@ -18,6 +18,7 @@ function Timer (props) {
   //     })
   // }
   function startTimer() {
+    setTimer((prev)=> prev-1)
     let timerId =setInterval(()=>{
       setTimer((prevTimer)=>{
         if(prevTimer!==0) {
@@ -32,7 +33,7 @@ function Timer (props) {
 return  (
   <div className="timer-cont">
     <span className="timer-text">{timer}</span>
-    <Button buttonText="Start Timer" handleClick={startTimer}/>
+    <Button  classes = { timer!=10 ? 'disabled': ''} buttonText="Start Timer" handleClick={startTimer}  />
   </div>
 )
 }
