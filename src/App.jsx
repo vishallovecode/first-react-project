@@ -10,6 +10,7 @@ import Counter from './components/counter';
 import CustomCard from './components/customcard';
 import InlineStyling from './components/inlineStyle';
 import Timer from './components/timer';
+import WordCounter from './components/wordounter';
 
 // receive  file 
 function App() {
@@ -33,7 +34,9 @@ function App() {
       {/* <JSXExample/> */}
       {/* <InlineStyling/> */}
       {/* <Timer/> */}
-      <ThemeChanger/>
+      {/* <ThemeChanger/>
+       */}
+       <WordCounter/>
     </div>
   );
 }
