@@ -11,10 +11,18 @@ function WordCounter() {
     setLimit(e.target.value)
   }
   function onChange(event) {
-      setParagraph(event.target.value)
+      let count  = countWords(event.target.value);
+      if(count<=limit) {
+        setParagraph(event.target.value)
+      } else {
+        const s = event.target.value;
+        const ss = s.split(' ').slice(0, limit).join(' ');
+        setParagraph(ss)
+      } 
+    
   }
-  function countWords(){
-    return paragraph.split(' ').length;
+  function countWords(value){
+    return value?.split(' ').length;
   }
 
   function rangeChange(event) {
@@ -28,7 +36,7 @@ function WordCounter() {
         <div>Word Limit Count</div>
         <input  type='number' defaultValue={limit}  onChange={onChangeLimit}/>
         <textarea rows="10" cols="50" value={paragraph} onChange={onChange} style={{fontSize:`${range}px`}}/>
-        <div>Total number of words written {countWords()}</div>
+        <div>Total number of words written {countWords(paragraph)}</div>
         <div>Total number of character used {paragraph.length}</div>
       </div>
     )
