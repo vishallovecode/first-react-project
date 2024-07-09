@@ -1,0 +1,12 @@
+.movie-container{
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-card-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

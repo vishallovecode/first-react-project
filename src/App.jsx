@@ -1,6 +1,7 @@
 
 import './App.css';
 import JSXExample from './components/JSXExample/jsxexample';
+import MovieCard from './components/MovieCard/MovieCard';
 
 
 import   Sqaure from './components/Square';
@@ -11,6 +12,7 @@ import CustomCard from './components/customcard';
 import InlineStyling from './components/inlineStyle';
 import Timer from './components/timer';
 import WordCounter from './components/wordounter';
+import MovieListing from './container/movieLisitng';
 
 // receive  file 
 function App() {
@@ -30,13 +32,27 @@ function App() {
 
       <CustomCard img={"https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg"} description={"Chalo sikh lia ha props"} heading={'Kya aya samja props me??'}/>
 
-      <CustomCard img={"https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg"} description={"Chalo sikh lia ha props"} heading={'Kya aya samja props me??'}/> */}
+       <CustomCard img={"https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg"} description={"Chalo sikh lia ha props"} heading={'Kya aya samja props me??'}/> */}
       {/* <JSXExample/> */}
       {/* <InlineStyling/> */}
       {/* <Timer/> */}
       {/* <ThemeChanger/>
        */}
-       <WordCounter/>
+       {/* <CustomCard img={"https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg"} description={"Chalo sikh lia ha props"} heading={'Kya aya samja props me??'}/>
+       <WordCounter/> */}
+       {/* <MovieCard 
+       imageUrl={'https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg'}
+       title={"The Shawshank Redemption"}
+       votes= {123}
+       rating ={3.4}
+       /> */}
+      {/* <MovieCard 
+       imageUrl={'https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg'}
+       title={"The  Coolie"}
+       votes= {234567}
+       rating ={4.4}
+       /> */}
+       <MovieListing/>
     </div>
   );
 }
