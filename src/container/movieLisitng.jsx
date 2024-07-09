@@ -22,33 +22,16 @@ function MovieListing(){
         />
       )
     })
-    console.log(data123)
+
     setMovies(moviesList.results)
   }
-
-//   const data  =
-//   [
-//     <MovieCard 
-//       imageUrl={'https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg'}
-//       title={"The  Coolie"}
-//       votes= {234567}
-//       rating ={4.4}
-//   /> , 
-//   <MovieCard 
-//       imageUrl={'https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg'}
-//       title={"The Shawshank Redemption"}
-//       votes= {123}
-//       rating ={3.4}
-//   />
-//  ]
-
   return  (
     <div className="movie-container">
       <div>
         <Button buttonText='Fetch Movies' handleClick={getAllMovies}/>
       </div>
       <div className="movie-card-cont">
-      {
+        {
           movies.map((movie)=>{
             return (
               <MovieCard title={movie.title} 
@@ -59,7 +42,7 @@ function MovieListing(){
             )
           })
         }
-  
+
         </div>
     </div>
   )
