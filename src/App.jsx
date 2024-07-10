@@ -10,6 +10,7 @@ import ThemeChanger from './components/colorChanger';
 import Counter from './components/counter';
 import CustomCard from './components/customcard';
 import InlineStyling from './components/inlineStyle';
+import PropsExample from './components/propsExample';
 import Timer from './components/timer';
 import WordCounter from './components/wordounter';
 import MovieListing from './container/movieLisitng';
@@ -52,7 +53,11 @@ function App() {
        votes= {234567}
        rating ={4.4}
        /> */}
-       <MovieListing/>
+       {/* <MovieListing/> */}
+
+       {/* <ThemeChanger/> */}
+            {/* <JSXExample/> */}
+            <PropsExample/>
     </div>
   );
 }

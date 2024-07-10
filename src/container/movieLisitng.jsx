@@ -34,7 +34,8 @@ function MovieListing(){
         {
           movies.map((movie)=>{
             return (
-              <MovieCard title={movie.title} 
+              <MovieCard 
+                title={movie.title} 
                  votes= {movie.vote_count}
                  rating={movie.vote_average}
                  imageUrl={`${base_img_url}${movie.backdrop_path}`}
@@ -42,12 +43,9 @@ function MovieListing(){
             )
           })
         }
-
         </div>
     </div>
   )
 }
-
-
 export default MovieListing;
 
