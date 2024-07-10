@@ -73,7 +73,7 @@ function E(props) {
   )
 }
 
-function F () {
+function F (props) {
   return (
     <h2>{props.mainheading}</h2>
   )
