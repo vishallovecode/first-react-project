@@ -1,7 +1,5 @@
 .report-card {
-   width: 200px;
-    background: pink;
-    color: red;
+   width: 300px;
     height: 40px;
     display: flex;
     /* justify-content: center; */
@@ -14,4 +12,35 @@
 .report-container {
   display: flex;
   margin-top: 40px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin: auto;
+  padding: 30px;
+}
+
+.pass {
+  background-color: pink;
+  color: red
+}
+
+.execellent {
+  background-color: orange;
+  color: white;
+}
+
+.veryGood {
+  background-color: green;
+  color: white;
+}
+
+.good {
+    background-color: blue;
+    color: white;
+}
+
+.failed {
+  background-color: black;
+  color: white;
 }

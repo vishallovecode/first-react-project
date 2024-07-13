@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './style.css'
+import ReportCard from "./ReportCard"
 
 function ExampleListing() {
   const initialState = [
@@ -19,13 +20,27 @@ function ExampleListing() {
     {id:14, name: 'Anand' , lastName: 'Kumar' , percentage: 85},
     {id:15, name: 'Mohit' , lastName: 'Mishra' , percentage: 75}
   ]
-  const [data , setData] = useState()
+  const [data , setData] = useState(initialState)
   return  (
   <div className="report-container">
-    <div className="report-card">
-      <span> Mohit Kumar</span>
-      <span>Pass </span>
-    </div>
+      {
+        // Write Javascript Code
+
+        data.map((item)=>{
+          const studentName = `${item.name} ${item.lastName}`;
+            if(item.percentage > 90){
+              return <ReportCard name= {studentName} text= "Pass(Exellent)" classes="execellent"/>
+            } else if(item.percentage<=90 && item.percentage>80){
+              return <ReportCard name= {studentName} text= "Pass(Very Good)" classes="veryGood"/>
+            } else if(item.percentage<=80 && item.percentage>70) {
+              return <ReportCard name= {studentName} text= "Pass(Good)" classes="good"/>
+            } else if(item.percentage<=70 && item.percentage >32) {
+              return <ReportCard name= {studentName} text= "Pass" classes="pass"/>
+            } else {
+              return <ReportCard name= {studentName} text= "Failed" classes="failed"/>
+            }
+        })
+      }
     </div>
   )
 }
