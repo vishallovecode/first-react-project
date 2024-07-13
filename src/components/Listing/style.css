@@ -1,0 +1,17 @@
+.report-card {
+   width: 200px;
+    background: pink;
+    color: red;
+    height: 40px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.report-container {
+  display: flex;
+  margin-top: 40px;
+}
