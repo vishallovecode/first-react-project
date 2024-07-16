@@ -25,7 +25,6 @@ function ExampleListing() {
   <div className="report-container">
       {
         // Write Javascript Code
-
         data.map((item)=>{
           const studentName = `${item.name} ${item.lastName}`;
             if(item.percentage > 90){
@@ -55,3 +54,18 @@ export default ExampleListing;
 // Raj Kumar    Pass (Pink , red)
 // Gaurav Srivastava Pass(Exellent)
 // Ankit Dutta       Failed (background black  , white)
+
+
+
+// JSX
+// STATE
+// PROPS 
+// Conditional Rendering 
+// Functional Component 
+// We are done with creating reusable component
+
+
+
+// useEffect (Tuesday)
+
+// Monday (Github and assignment)

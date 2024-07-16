@@ -5,16 +5,16 @@ function MovieCard(props){
   return (
     <div className="card-container">
       <div className="card-header">
-        <img src={props.movie.imageUrl}/>
+        <img src={props.imageUrl}/>
       </div>
-      <div className="card-body">{props.movie.title}</div>
+      <div className="card-body">{props.title}</div>
       <div className="card-footer">
           <div className='content'>
             <span>
-            Votes: {props.movie.votes}
+            Votes: {props.votes}
             </span>
             <span>
-            Rating: {props.movie.rating}
+            Rating: {props.rating}
             </span>
           </div>
           <div>

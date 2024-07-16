@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../components/button";
 
 import './style.css'
@@ -13,22 +13,21 @@ function MovieListing(){
     const base_url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US';
     const data = await fetch(base_url);
     const moviesList = await data.json()
-    const data123  =  moviesList.results.map((movie)=>{
-      return  (
-        <MovieCard title={movie.title} 
-        votes= {movie.vote_count}
-        rating={movie.vote_average}
-        imageUrl={`${base_img_url}${movie.backdrop_path}`}
-        />
-      )
-    })
-
     setMovies(moviesList.results)
   }
+
+const callback =  ()=>{
+    // this is callback function this function will only execute once when your component mounted in dom first dom
+  } 
+
+  useEffect(()=>{
+    getAllMovies()
+  } ,  [])
+
   return  (
     <div className="movie-container">
       <div>
-        <Button buttonText='Fetch Movies' handleClick={getAllMovies}/>
+        {/* <Button buttonText='Fetch Movies' handleClick={getAllMovies}/> */}
       </div>
       <div className="movie-card-cont">
         {

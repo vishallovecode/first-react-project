@@ -10,3 +10,11 @@ function ReportCard(props) {
 
 
 export default ReportCard;
+
+
+// function Input (props) {
+//     const  {type , handleSearch , placeHolder , classes} = props;
+//     return  (
+//       <input type={type} onChange={handleSearch} placeholder={placeHolder} className={`input  ${classes}`}
+//     )
+// };
