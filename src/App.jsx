@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import './App.css';
 import JSXExample from './components/JSXExample/jsxexample';
 import ExampleListing from './components/Listing';
@@ -13,11 +14,18 @@ import CustomCard from './components/customcard';
 import InlineStyling from './components/inlineStyle';
 // import PropsExample from './components/propsExample';
 import Timer from './components/timer';
+import UseEffectExample from './components/useEffect';
 import WordCounter from './components/wordounter';
 import MovieListing from './container/movieLisitng';
 
 // receive  file 
 function App() {
+
+  useEffect(()=>{
+    console.log('I will get call only once..... app')
+  } ,[])
+
+  
   return (
     <div className="App">
       {/* <Sqaure>Hey</Sqaure> */}
@@ -54,12 +62,13 @@ function App() {
        votes= {234567}
        rating ={4.4}
        /> */}
-       <MovieListing/>
+       {/* <MovieListing/> */}
 
        {/* <ThemeChanger/> */}
             {/* <JSXExample/> */}
             {/* <PropsExample/> */}
             {/* <ExampleListing/> */}
+            <UseEffectExample/>
     </div>
   );
 }

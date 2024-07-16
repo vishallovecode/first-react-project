@@ -22,6 +22,9 @@ const callback =  ()=>{
 
   useEffect(()=>{
     getAllMovies()
+    // you can do action here , i am calling the api getAllMovies only 
+    // once when componenent is moundted in dom fully
+
   } ,  [])
 
   return  (
