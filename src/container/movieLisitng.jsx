@@ -6,8 +6,10 @@ import MovieCard from "../components/MovieCard/MovieCard";
 
 function MovieListing(){
 
-  const [movies , setMovies] = useState([]);
+  const [movies , setMovies] = useState([]); 
   const[selectedSort , setSelectedSort] = useState('')
+  const [searchQuery , setSearchQuery] = useState('')
+  const [filterMovies , setFilterMovies] = useState([])
   const base_img_url = 'https://image.tmdb.org/t/p/original'
 
   async function getAllMovies(){
@@ -15,6 +17,7 @@ function MovieListing(){
     const data = await fetch(base_url);
     const moviesList = await data.json()
     setMovies(moviesList.results) // state updated , re-render
+    setFilterMovies(moviesList.results)
   }
 
   // getAllMovies() this will cause infinite api call because you are updating state inside this function  
@@ -39,6 +42,21 @@ useEffect(()=>{
      sortMovieList(selectedSort)
 } ,  [selectedSort])
 
+
+useEffect(()=>{
+  // Whenever selectedSort state will change this function will run.
+  // So on the basis updated sort value we need to sort the movielist
+  filterMoviesList()
+} ,  [searchQuery])
+
+function filterMoviesList() {
+  const updatedMovies= movies.filter((movie)=>{
+    return movie.title.includes(searchQuery)
+  })
+  setFilterMovies(updatedMovies)
+
+}
+
 function filterChange(event) {
   setSelectedSort(event.target.value) // state is updating
 }
@@ -53,12 +71,17 @@ function sortMovieList(type) {
 }
 
 
+function handleSearch(e) {
+  setSearchQuery(e.target.value)
+}
+
 
   return  (
     <div className="movie-container">
       <div>
         <Button buttonText='Fetch Movies' handleClick={getAllMovies}/>
       </div>
+      <input placeholder="Search Movies" onChange={handleSearch}/>
       <select onChange={filterChange}>
         <option>Select</option>
         <option>Descending</option>
@@ -66,7 +89,7 @@ function sortMovieList(type) {
       </select>
       <div className="movie-card-cont">
         {
-          movies.map((movie)=>{
+          filterMovies.map((movie)=>{
             return (
               <MovieCard 
                 title={movie.title} 
