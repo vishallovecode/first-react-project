@@ -7,6 +7,7 @@ import MovieCard from "../components/MovieCard/MovieCard";
 function MovieListing(){
 
   const [movies , setMovies] = useState([]);
+  const[selectedSort , setSelectedSort] = useState('')
   const base_img_url = 'https://image.tmdb.org/t/p/original'
 
   async function getAllMovies(){
@@ -32,11 +33,37 @@ useEffect(()=>{
   getAllMovies()
 } ,  [])
 
+useEffect(()=>{
+     // Whenever selectedSort state will change this function will run.
+     // So on the basis updated sort value we need to sort the movielist
+     sortMovieList(selectedSort)
+} ,  [selectedSort])
+
+function filterChange(event) {
+  setSelectedSort(event.target.value) // state is updating
+}
+function sortMovieList(type) {
+ let uodatedMoviesList = [...movies]; // deep copy
+ if(type ==='Descending') {
+  uodatedMoviesList.sort((a,b)=> a.vote_count - b.vote_count);
+ } else {
+  uodatedMoviesList.sort((a,b)=> b.vote_count - a.vote_count);
+ }
+ setMovies(uodatedMoviesList)
+}
+
+
+
   return  (
     <div className="movie-container">
       <div>
         <Button buttonText='Fetch Movies' handleClick={getAllMovies}/>
       </div>
+      <select onChange={filterChange}>
+        <option>Select</option>
+        <option>Descending</option>
+        <option>Ascending</option>
+      </select>
       <div className="movie-card-cont">
         {
           movies.map((movie)=>{
