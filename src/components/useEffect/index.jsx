@@ -9,8 +9,11 @@ function UseEffectExample() {
   // useEffect with empty dependecny
   
   useEffect(()=>{
-    console.log('I will get call only once..... UseEffectExample')
+    // this function  will be executed after component is mounted and render in dom
+    console.log('UseEffect Component render in UI')
   } , [])
+
+
 
   function updateCounter() {
     setCounter((prev)=> prev+1)
@@ -21,7 +24,7 @@ function UseEffectExample() {
     console.log('Timer delay')
   },  [counter])
 
-  
+
   return  (
     <div>
       <h2>UseEffect Example.... {counter}</h2>
@@ -32,3 +35,9 @@ function UseEffectExample() {
 
 
 export default UseEffectExample;
+
+
+
+
+
+

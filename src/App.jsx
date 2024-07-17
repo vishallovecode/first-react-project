@@ -25,7 +25,7 @@ function App() {
     console.log('I will get call only once..... app')
   } ,[])
 
-  
+
   return (
     <div className="App">
       {/* <Sqaure>Hey</Sqaure> */}
@@ -62,13 +62,13 @@ function App() {
        votes= {234567}
        rating ={4.4}
        /> */}
-       {/* <MovieListing/> */}
+       <MovieListing/>
 
        {/* <ThemeChanger/> */}
             {/* <JSXExample/> */}
             {/* <PropsExample/> */}
             {/* <ExampleListing/> */}
-            <UseEffectExample/>
+            {/* <UseEffectExample/> */}
     </div>
   );
 }

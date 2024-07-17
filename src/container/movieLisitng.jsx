@@ -13,24 +13,29 @@ function MovieListing(){
     const base_url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US';
     const data = await fetch(base_url);
     const moviesList = await data.json()
-    setMovies(moviesList.results)
+    setMovies(moviesList.results) // state updated , re-render
   }
 
-const callback =  ()=>{
-    // this is callback function this function will only execute once when your component mounted in dom first dom
-  } 
+  // getAllMovies() this will cause infinite api call because you are updating state inside this function  
+  // updating the state cause the re-render the component  , re-render the component wille execute line no 19
+  // which will call function again  that function updating the state again  , updating state will re-render the compoenent again\
+  // so on....
 
-  useEffect(()=>{
-    getAllMovies()
-    // you can do action here , i am calling the api getAllMovies only 
-    // once when componenent is moundted in dom fully
+// How to know mouning is done  
 
-  } ,  [])
+useEffect(()=>{
+  // HERE IF YOU ARE THAT MEANS YOUR COMPONENT IS MOUNTED , OR FIRST TIME RENDER IN UI 
+  // SO If you want than you can get data from api 
+  // here you will come only one time throught the lifecycle of compoennt
+
+  console.log(' mE AAA gYA')
+  getAllMovies()
+} ,  [])
 
   return  (
     <div className="movie-container">
       <div>
-        {/* <Button buttonText='Fetch Movies' handleClick={getAllMovies}/> */}
+        <Button buttonText='Fetch Movies' handleClick={getAllMovies}/>
       </div>
       <div className="movie-card-cont">
         {
