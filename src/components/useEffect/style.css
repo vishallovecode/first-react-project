@@ -1,0 +1,32 @@
+
+.box-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  background-color: red ;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  height: 300px;
+  width: 300px;
+}
+.bg-blue {
+  background-color: blue ;
+}
+
+.bg-pink {
+  background-color: pink ;
+  color: black;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-yellow {
+  background-color: yellow;
+  color: black;
+}

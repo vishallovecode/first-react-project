@@ -62,13 +62,13 @@ function App() {
        votes= {234567}
        rating ={4.4}
        /> */}
-       <MovieListing/>
+       {/* <MovieListing/> */}
 
        {/* <ThemeChanger/> */}
             {/* <JSXExample/> */}
             {/* <PropsExample/> */}
             {/* <ExampleListing/> */}
-            {/* <UseEffectExample/> */}
+            <UseEffectExample/>
     </div>
   );
 }

@@ -106,3 +106,17 @@ function handleSearch(e) {
 }
 export default MovieListing;
 
+
+
+// Vo hame ab lagatar age use karenge  
+// Unmounting 
+
+
+
+// Once component loaded you want to call api  (side effect)
+// Once component is loaded you want to log whether compoent is visible in ui or not
+
+// // useEffect(()=>{
+//     //mounted
+// } ,  [])
+

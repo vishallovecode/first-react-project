@@ -1,9 +1,18 @@
 import { useEffect, useState } from "react";
 import Button from "../button";
+import Box from "../box";
+import  './style.css'
 
 function UseEffectExample() {
   
   const [counter , setCounter] = useState(0)
+  const [hideObject , setHideObject] = useState({
+    first:true ,
+    second: true,
+    third: true,
+    fourth: true,
+    five: true
+  })
   // 1 if this compounted is first inserted into dom after that  we want to do some actions
 
   // useEffect with empty dependecny
@@ -25,16 +34,31 @@ function UseEffectExample() {
   },  [counter])
 
 
+  function hide(type) {
+    const obj = {...hideObject};
+    obj[type]= false
+    setHideObject(obj)
+  }
+
+  
+  
+
   return  (
-    <div>
-      <h2>UseEffect Example.... {counter}</h2>
-      <Button handleClick={updateCounter} buttonText="Increase"></Button>
+    <div className="box-cont">
+    {hideObject.first && <Box boxName= "First Box" classes="box"/>}
+     <Button buttonText= {'Hide First Box'} handleClick={()=>{hide('first')}}/>
+     <Box boxName= "Second Box" classes="box bg-blue "/>
+     <Box boxName= "Third Box" classes="box bg-pink"/>
+     <Box boxName= "Fourth Box" classes="box bg-black"/>
+     <Box boxName= "Five  Box" classes="box bg-yellow "/>
     </div>
   )
 }
 
 
 export default UseEffectExample;
+
+
 
 
 
