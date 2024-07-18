@@ -10,6 +10,8 @@ function Box(props) {
 
     return  ()=> {
       // unmounting
+  // 1 if this compounted is first inserted into dom after that  we want to do some actions
+
       console.log(props.boxName ,  ' unmounted')
     }
   } , [])

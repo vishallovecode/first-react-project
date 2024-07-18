@@ -17,6 +17,7 @@ import Timer from './components/timer';
 import UseEffectExample from './components/useEffect';
 import WordCounter from './components/wordounter';
 import MovieListing from './container/movieLisitng';
+import Button from './components/button';
 
 // receive  file 
 function App() {
@@ -68,7 +69,11 @@ function App() {
             {/* <JSXExample/> */}
             {/* <PropsExample/> */}
             {/* <ExampleListing/> */}
-            <UseEffectExample/>
+            {/* <UseEffectExample/> */}
+            {/* <Button buttonText="Submit"/> */}
+            <Button >
+              Submit
+            </Button>
     </div>
   );
 }
@@ -77,3 +82,15 @@ export default App;
 
 // App is reacrt component you can call it like  //  <App/>
 
+// every props have default properties called children.
+// children properties is the value b/w open tag and close tag
+
+
+
+{/* <Card>
+  {
+    big Jsx code thousands of line
+  }
+</Card>
+
+props.children */}

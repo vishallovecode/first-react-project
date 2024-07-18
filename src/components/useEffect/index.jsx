@@ -13,6 +13,7 @@ function UseEffectExample() {
     fourth: true,
     five: true
   })
+
   // 1 if this compounted is first inserted into dom after that  we want to do some actions
 
   // useEffect with empty dependecny
