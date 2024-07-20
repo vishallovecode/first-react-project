@@ -29,7 +29,7 @@ function ExampleKeys () {
   
 
     return (
-      <div>
+      <div style={{margin:'auto'}}>
         <b>How to use: </b>
         First write something in the inputs
         (or <a href='#' onClick={userInput}>simulate it</a>).
