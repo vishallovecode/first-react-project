@@ -23,11 +23,21 @@ function ExampleKeys () {
   
   function addItem() {
     const id = +new Date;
-    setList([ {name: 'Baz' + id, id} , ...list]);
+    let updatedList = [...list]; // deep copy
+    // updatedList.unshift( {name: 'Baz' + id, id}) // first index
+    // updatedList = [{name: 'Baz' + id, id} , ...list] // first index push
+    updatedList.push({name: 'Baz' + id, id} ) // last push
+    setList(updatedList);
 
   }
   
-
+function removeItem(index) {
+  let updatedList = [...list]; // deep copy
+  // updatedList.unshift( {name: 'Baz' + id, id}) // this is adding item to the 0 index
+  updatedList.shift() // removing item from first
+  // updatedList.pop() // removing item from last
+  setList(updatedList);
+}
     return (
       <div style={{margin:'auto'}}>
         <b>How to use: </b>
@@ -36,6 +46,8 @@ function ExampleKeys () {
         Then hit <em>Add item</em> and see what happens…
         <hr/>
         <button className='btn btn-primary' onClick={addItem}><b>Add item</b> to the beginning of the list</button>
+        <button className='btn btn-primary' onClick={removeItem}><b>Remove item</b></button>
+
       
 
         <h3>Dangerous <code>key=index</code></h3>
