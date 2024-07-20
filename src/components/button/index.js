@@ -41,3 +41,34 @@ export default Button
 // }
 
 
+
+
+
+ //(1)
+// Understanding Keys
+// Reconcilation
+// React fiber
+// Differ algorithm 
+// Virtual dom
+
+// Class based components (1)
+
+// React router (2)
+
+
+
+// Next Introduce => 2
+// Higher order component(1/2)
+// useRef (1/2)
+// useCallback  (1)
+// useMemo (1)
+// Context api (2-3)
+// Custom react hooks (1)
+// Extraa (5)
+
+
+// useRef  
+// useCallback
+// useMemo 
+// useContext
+// useReducer

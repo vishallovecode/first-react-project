@@ -25,20 +25,21 @@ function ExampleListing() {
   <div className="report-container">
       {
         // Write Javascript Code
-        data.map((item)=>{
+       data.map((item ,)=>{
           const studentName = `${item.name} ${item.lastName}`;
             if(item.percentage > 90){
-              return <ReportCard name= {studentName} text= "Pass(Exellent)" classes="execellent"/>
+              return <ReportCard name= {studentName} text= "Pass(Exellent)" classes="execellent" key={item.id}/>
             } else if(item.percentage<=90 && item.percentage>80){
-              return <ReportCard name= {studentName} text= "Pass(Very Good)" classes="veryGood"/>
+              return <ReportCard name= {studentName} text= "Pass(Very Good)" classes="veryGood" key={item.id}/>
             } else if(item.percentage<=80 && item.percentage>70) {
-              return <ReportCard name= {studentName} text= "Pass(Good)" classes="good"/>
+              return <ReportCard name= {studentName} text= "Pass(Good)" classes="good" key={item.id}/>
             } else if(item.percentage<=70 && item.percentage >32) {
-              return <ReportCard name= {studentName} text= "Pass" classes="pass"/>
+              return <ReportCard name= {studentName} text= "Pass" classes="pass" key={item.id}/>
             } else {
-              return <ReportCard name= {studentName} text= "Failed" classes="failed"/>
+              return <ReportCard name= {studentName} text= "Failed" classes="failed" key={item.id}/>
             }
         })
+        // [<ReportCard/> , <ReportCard/>,<ReportCard/>,<ReportCard/>,<ReportCard/>]
       }
     </div>
   )
@@ -69,3 +70,20 @@ export default ExampleListing;
 // useEffect (Tuesday)
 
 // Monday (Github and assignment)
+
+// <div>
+//   {
+//     [<div>1</div> , <div>2</div>]
+//   }
+// </div>
+
+
+// When we are rendering the list of elements i react using map and filter we need to give unique identity to the 
+// element which we want to render as a list , this unique identifier is use for updating the things and fast
+// React gives key as index by default , but react throws warning to letting you know that  , this  key as index can 
+// harm your website and logic , but if you give key as index react stop throwing error or warning because react consider
+// you have put index as key  , which will not harm your website working
+
+
+// You can give key as index , only when  , there is static list you are not updating that list , like deleting item from list 
+// sorting that list etc.

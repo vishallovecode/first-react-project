@@ -18,6 +18,7 @@ import UseEffectExample from './components/useEffect';
 import WordCounter from './components/wordounter';
 import MovieListing from './container/movieLisitng';
 import Button from './components/button';
+import ExampleKeys from './components/KeyListing';
 
 // receive  file 
 function App() {
@@ -71,9 +72,10 @@ function App() {
             {/* <ExampleListing/> */}
             {/* <UseEffectExample/> */}
             {/* <Button buttonText="Submit"/> */}
-            <Button >
+            {/* <Button >
               Submit
-            </Button>
+            </Button> */}
+            <ExampleKeys/>
     </div>
   );
 }
