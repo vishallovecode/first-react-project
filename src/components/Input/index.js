@@ -16,12 +16,17 @@ function Input (props) {
    // props = {}
   // type , value , placeHolder , searchAction , classes , style , name
   const {type='text' , value ,placeHolder="Enter a value", searchAction, name="search", classes="" , style= {} , focusAction , blurAction} =   props // {type:'text' , value: 'Atta' , searchAction: 'handleChange', name:"search" , classes:"search"} 
+
+function handleChange(e) {
+   searchAction(e.target.value) // child to parent =>
+}
+
   return  (
     <input 
       type={type}  
       defaultValue={value} 
       placeholder={placeHolder}
-      onChange={searchAction}  
+      onChange={handleChange}  
       name={name} style={style} 
       className={`input ${classes}`}
       onFocus={focusAction}

@@ -65,7 +65,7 @@ function App() {
        votes= {234567}
        rating ={4.4}
        /> */}
-       {/* <MovieListing/> */}
+       <MovieListing/>
 
        {/* <ThemeChanger/> */}
             {/* <JSXExample/> */}
@@ -77,14 +77,14 @@ function App() {
               Submit
             </Button> */}
             {/* <ExampleKeys/> */}
-            <div 
+            {/* <div 
               style={{marginTop: '40px' , marginLeft:'20px' , display:'flex' , flexDirection: 'column' , gap: '10px'}}
-            >
-              <Input/>
+            > */}
+              {/* <Input/>
               <Input type='number'/>
               <Input type='number' placeHolder="Search a Products"/>
-              <Input  value= "Just hit me" type='number'   style={{border: '3px solid pink' ,color: 'blue' }}/>
-            </div>
+              <Input  value= "Just hit me" type='number'   style={{border: '3px solid pink' ,color: 'blue' }}/> */}
+            {/* </div> */}
     </div>
   );
 }

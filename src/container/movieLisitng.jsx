@@ -3,6 +3,7 @@ import Button from "../components/button";
 
 import './style.css'
 import MovieCard from "../components/MovieCard/MovieCard";
+import Input from "../components/Input";
 
 function MovieListing(){
 
@@ -54,7 +55,6 @@ function filterMoviesList() {
     return movie.title.includes(searchQuery)
   })
   setFilterMovies(updatedMovies)
-
 }
 
 function filterChange(event) {
@@ -71,8 +71,9 @@ function sortMovieList(type) {
 }
 
 
-function handleSearch(e) {
-  setSearchQuery(e.target.value)
+// new code
+function handleSearch(value) {
+  setSearchQuery(value) // this is needed for capturing user input
 }
 
 
@@ -81,7 +82,10 @@ function handleSearch(e) {
       <div>
         <Button buttonText='Fetch Movies' handleClick={getAllMovies}/>
       </div>
-      <input placeholder="Search Movies" onChange={handleSearch}/>
+      {/* <input placeholder="Search Movies" onChange={handleSearch}/> */}
+    {/*  new code */}
+      <Input placeholder="Search Movies" value= {searchQuery} searchAction={handleSearch} />
+
       <select onChange={filterChange}>
         <option>Select</option>
         <option>Descending</option>
