@@ -101,7 +101,7 @@ const A =() => {
 
 
 // Re-usable component that is basically use for re-using again and again 
-<Button/>
+{/* <Button/> */}
 
 
 // [Hello] => Home

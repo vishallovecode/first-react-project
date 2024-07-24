@@ -19,6 +19,7 @@ import WordCounter from './components/wordounter';
 import MovieListing from './container/movieLisitng';
 import Button from './components/button';
 import ExampleKeys from './components/KeyListing';
+import Input from './components/Input';
 
 // receive  file 
 function App() {
@@ -75,7 +76,15 @@ function App() {
             {/* <Button >
               Submit
             </Button> */}
-            <ExampleKeys/>
+            {/* <ExampleKeys/> */}
+            <div 
+              style={{marginTop: '40px' , marginLeft:'20px' , display:'flex' , flexDirection: 'column' , gap: '10px'}}
+            >
+              <Input/>
+              <Input type='number'/>
+              <Input type='number' placeHolder="Search a Products"/>
+              <Input  value= "Just hit me" type='number'   style={{border: '3px solid pink' ,color: 'blue' }}/>
+            </div>
     </div>
   );
 }
