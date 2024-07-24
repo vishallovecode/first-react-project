@@ -77,3 +77,41 @@ function removeItem(index) {
 
 
 export default ExampleKeys;
+
+
+
+
+// props 
+
+
+const B =(props)=>{
+  console.log(props) // {data: [1,2,3]}  // props.data => [1,2,3]
+  return (
+    <div>
+      {'Hello'}
+    </div>
+  )
+}
+
+const A =() => {
+  return  (
+    <B  data = {[1,2,3]}/>
+  )
+}
+
+
+// Re-usable component that is basically use for re-using again and again 
+<Button/>
+
+
+// [Hello] => Home
+//  [Submit] => Product listing
+//    [Continue] => Cart
+//    [css should be diff]
+//     // clicking on the button we want different action 
+
+
+// You arer creating one compopent and using this again and again for dirrenet scenario 
+
+
+
