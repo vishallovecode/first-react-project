@@ -11,14 +11,17 @@ function MovieListing(){
   const[selectedSort , setSelectedSort] = useState('')
   const [searchQuery , setSearchQuery] = useState('')
   const [filterMovies , setFilterMovies] = useState([])
+  const [loading , setLoading]= useState(false);
   const base_img_url = 'https://image.tmdb.org/t/p/original'
 
   async function getAllMovies(){
+    setLoading(true)
     const base_url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US';
     const data = await fetch(base_url);
     const moviesList = await data.json()
     setMovies(moviesList.results) // state updated , re-render
     setFilterMovies(moviesList.results)
+    setLoading(false)
   }
 
   // getAllMovies() this will cause infinite api call because you are updating state inside this function  
@@ -91,7 +94,7 @@ function handleSearch(value) {
         <option>Descending</option>
         <option>Ascending</option>
       </select>
-      <div className="movie-card-cont">
+   {  !loading?  <div className="movie-card-cont">
         {
           filterMovies.map((movie)=>{
             return (
@@ -104,9 +107,10 @@ function handleSearch(value) {
             )
           })
         }
-        </div>
+        </div> : <div>Loading....</div>}
     </div>
   )
+  
 }
 export default MovieListing;
 

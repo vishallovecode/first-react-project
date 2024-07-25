@@ -17,6 +17,7 @@ function Input (props) {
   // type , value , placeHolder , searchAction , classes , style , name
   const {type='text' , value ,placeHolder="Enter a value", searchAction, name="search", classes="" , style= {} , focusAction , blurAction} =   props // {type:'text' , value: 'Atta' , searchAction: 'handleChange', name:"search" , classes:"search"} 
 
+  // new code
 function handleChange(e) {
    searchAction(e.target.value) // child to parent =>
 }
@@ -45,3 +46,6 @@ export default Input;
 <Input type='text'  value='Atta'  onChange={handleChanges}  name='search' , classes='search' />
 
 // props => {type:'text' , value: 'Atta' , onChange: 'handleChange', name:"search" , classes:"search"} */}
+
+
+// props vs state  
