@@ -76,6 +76,7 @@ function sortMovieList(type) {
 
 // new code
 function handleSearch(value) {
+  // filterMoviesList(value)
   setSearchQuery(value) // this is needed for capturing user input
 }
 
