@@ -22,6 +22,7 @@ import ExampleKeys from './components/KeyListing';
 import Input from './components/Input';
 import TwoWayBinding from './container/twowaybinding';
 import FirstComponent from './classComponent/firstComponent';
+import LifeCycleMethod from './classComponent/lifeCycleMethod';
 
 // receive  file 
 function App() {
@@ -90,7 +91,9 @@ function App() {
             {/* <TwoWayBinding/> */}
 
             {/* // Class Component */}
-              <FirstComponent/>
+              {/* <FirstComponent/> */}
+              {/* LifecYCLE mETHOD */}
+              <LifeCycleMethod/>
     </div>
   );
 }

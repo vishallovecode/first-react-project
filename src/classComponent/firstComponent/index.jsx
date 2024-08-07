@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, useEffect } from "react";
 import Button from "../../components/button";
 import Child from "./child";
 
@@ -75,3 +75,20 @@ export default FirstComponent;
 // }
 
 // employee.getName()
+
+
+// // useEffect(()=>{
+
+// } , [])
+
+
+// useEffect(()=> {
+//    // initializtion 
+// })
+
+
+// useEffect(()=>{
+//   return ()=> {
+//     // unmounting
+//   }
+// } , [])
