@@ -21,6 +21,7 @@ import Button from './components/button';
 import ExampleKeys from './components/KeyListing';
 import Input from './components/Input';
 import TwoWayBinding from './container/twowaybinding';
+import FirstComponent from './classComponent/firstComponent';
 
 // receive  file 
 function App() {
@@ -86,7 +87,10 @@ function App() {
               <Input type='number' placeHolder="Search a Products"/>
               <Input  value= "Just hit me" type='number'   style={{border: '3px solid pink' ,color: 'blue' }}/> */}
             {/* </div> */}
-            <TwoWayBinding/>
+            {/* <TwoWayBinding/> */}
+
+            {/* // Class Component */}
+              <FirstComponent/>
     </div>
   );
 }
