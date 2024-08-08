@@ -23,6 +23,8 @@ import Input from './components/Input';
 import TwoWayBinding from './container/twowaybinding';
 import FirstComponent from './classComponent/firstComponent';
 import LifeCycleMethod from './classComponent/lifeCycleMethod';
+import Header from './components/header';
+import { Routes , Route } from 'react-router-dom';
 
 // receive  file 
 function App() {
@@ -93,7 +95,15 @@ function App() {
             {/* // Class Component */}
               {/* <FirstComponent/> */}
               {/* LifecYCLE mETHOD */}
-              <LifeCycleMethod/>
+              {/* <LifeCycleMethod/> */}
+
+            {/* Header we want to show in all cases */}
+            <Header/>
+            {/* Rule */}
+            <Routes>
+              <Route path='/square' element= {<Sqaure/>}/>
+            </Routes>
+    
     </div>
   );
 }

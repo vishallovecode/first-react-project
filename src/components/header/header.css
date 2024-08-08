@@ -1,0 +1,21 @@
+
+.header {
+  background-color: lightgray;
+  width: 100%;
+}
+
+.header-cont {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.item {
+  text-decoration: underline;
+  font-size: 24px;
+  color: blue;
+  font-weight: 400;
+  cursor: pointer;
+}

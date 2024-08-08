@@ -5,7 +5,8 @@ class Child extends Component {
   constructor(props) {
     super(props) // 
     this.state = {
-
+      array: [] ,
+      users: []
     }
   }
 

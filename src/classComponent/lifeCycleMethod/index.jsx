@@ -22,6 +22,7 @@ class LifeCycleMethod extends  Component {
 
   componentDidUpdate(nextProps , nextState) {
      // this is call just after the state and props updated
+     //
     console.log('hey')
     //  // useEffect(()=>{
 
@@ -30,14 +31,13 @@ class LifeCycleMethod extends  Component {
  
   shouldComponentUpdate(nextProps , nextState) {
  // this is call just before state and props  update
-
-
      // whenever state and props
     console.log(nextProps , nextState)
    // if this function return true  then state updated otherwise it will not
    if(nextState.heading ==='chill')
      return true;
   }
+
   changeHeading = ()=> {
     this.setState({...this.state, heading: 'Cool this is coll'})
   }
@@ -60,3 +60,7 @@ class LifeCycleMethod extends  Component {
 }
 
 export default LifeCycleMethod;
+
+// single page application 
+
+//multipage application 
