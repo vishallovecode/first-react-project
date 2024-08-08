@@ -6,7 +6,8 @@
 
 .header-cont {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
   padding: 10px 30px;
   text-decoration: none;
   list-style: none;
