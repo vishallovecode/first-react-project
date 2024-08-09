@@ -25,6 +25,7 @@ import FirstComponent from './classComponent/firstComponent';
 import LifeCycleMethod from './classComponent/lifeCycleMethod';
 import Header from './components/header';
 import { Routes , Route } from 'react-router-dom';
+import ProductListing from './container/productlisting';
 
 // receive  file 
 function App() {
@@ -62,6 +63,8 @@ function App() {
               <Route path='/square' element= {<Sqaure/>}/>
               <Route path='/class-component' element= {<FirstComponent/>}/>
               <Route path='/useffect' element= {<UseEffectExample/>}/>
+              <Route path = '/productlisting' element= {<ProductListing/>}/> 
+              <Route path = '/productlisting' element= {<ProductListing/>}/> 
             </Routes>
     
     </div>

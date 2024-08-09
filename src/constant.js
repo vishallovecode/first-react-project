@@ -24,4 +24,5 @@ export const headerConstant = [
   {name: 'ExampleKeys', link:'/key-example'},
   {name: 'LifeCycleMethod', link:'/lifecycle'},
   {name: 'ClassComponent', link:'/class-component'},
+  {name: 'DynamicRouting', link:'/productlisting'}
 ]
