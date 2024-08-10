@@ -69,7 +69,7 @@ function App() {
 
 
               {/* Dynamic Routing */}
-              <Route path='products/:id' element= {<SingleProductDetails/>}/>
+              <Route path='products/:productId' element= {<SingleProductDetails/>}/>
     
             </Routes>
     

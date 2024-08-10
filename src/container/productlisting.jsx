@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const ProductListing  =() => {
   const  [products , setProducts] = useState([]);
-
+  const navigate = useNavigate();
   async function fetchProducts () {
       const  data =  await fetch('https://dummyjson.com/products');
       const res =    await  data.json();
@@ -14,7 +14,8 @@ const ProductListing  =() => {
       fetchProducts()
   } , [])
   const handleClick = (id)=> {
-    window.location.pathname = `products/${id}`
+    // window.location.pathname = `products/${id}`
+    navigate(`/products/${id}`)
   }
 
   return(
