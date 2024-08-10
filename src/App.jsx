@@ -27,6 +27,7 @@ import Header from './components/header';
 import { Routes , Route } from 'react-router-dom';
 import ProductListing from './container/productlisting';
 import SingleProductDetails from './components/productdetails';
+import NotFound from './components/not-found';
 
 // receive  file 
 function App() {
@@ -65,11 +66,10 @@ function App() {
               <Route path='/class-component' element= {<FirstComponent/>}/>
               <Route path='/useffect' element= {<UseEffectExample/>}/>
               <Route path = '/productlisting' element= {<ProductListing/>}/> 
-              <Route path = '/productlisting' element= {<ProductListing/>}/> 
-
-
+            
               {/* Dynamic Routing */}
               <Route path='products/:productId' element= {<SingleProductDetails/>}/>
+              <Route path='*' element= {<NotFound/>}/>
     
             </Routes>
     
