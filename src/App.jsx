@@ -26,6 +26,7 @@ import LifeCycleMethod from './classComponent/lifeCycleMethod';
 import Header from './components/header';
 import { Routes , Route } from 'react-router-dom';
 import ProductListing from './container/productlisting';
+import SingleProductDetails from './components/productdetails';
 
 // receive  file 
 function App() {
@@ -65,6 +66,11 @@ function App() {
               <Route path='/useffect' element= {<UseEffectExample/>}/>
               <Route path = '/productlisting' element= {<ProductListing/>}/> 
               <Route path = '/productlisting' element= {<ProductListing/>}/> 
+
+
+              {/* Dynamic Routing */}
+              <Route path='products/:id' element= {<SingleProductDetails/>}/>
+    
             </Routes>
     
     </div>
