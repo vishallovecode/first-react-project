@@ -6,9 +6,6 @@ function Parent() {
     <h2>I am  Parent</h2>
     <Child/>
     </div>
-    
   )
 }
-
-
 export default Parent
