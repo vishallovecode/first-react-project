@@ -28,6 +28,7 @@ import { Routes , Route } from 'react-router-dom';
 import ProductListing from './container/productlisting';
 import SingleProductDetails from './components/productdetails';
 import NotFound from './components/not-found';
+import GrandParent from './context/GrandParent';
 
 // receive  file 
 function App() {
@@ -36,8 +37,6 @@ function App() {
     console.log('I will get call only once..... app')
   } ,[])
 
-
- 
   return (
     <div className="App">
       <Header/>
@@ -69,7 +68,9 @@ function App() {
             
               {/* Dynamic Routing */}
               <Route path='products/:productId' element= {<SingleProductDetails/>}/>
+              <Route path='/react-context' element={<GrandParent/>}/>
               <Route path='*' element= {<NotFound/>}/>
+
     
             </Routes>
     
@@ -93,3 +94,7 @@ export default App;
 </Card>
 
 props.children */}
+
+
+
+

@@ -49,3 +49,5 @@ function WordCounter() {
 
 
 export default WordCounter;
+
+

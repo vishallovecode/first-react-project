@@ -15,7 +15,7 @@ const ProductListing  =() => {
   } , [])
   const handleClick = (id)=> {
     // window.location.pathname = `products/${id}`
-    navigate(`/products/${id}`)
+navigate(`/products/${id}`)
   }
 
   return(
