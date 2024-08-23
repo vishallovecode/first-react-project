@@ -1,8 +1,13 @@
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './style.css'
+import { AppContext, WORD_COUNT_UPDATE } from '../../appContext';
 
 function WordCounter() {
+  const  {state , dispatch} = useContext(AppContext);
+
+  console.log(state , 'Word coiny')
+
   const [paragraph , setParagraph] = useState('')
   const[limit , setLimit] = useState(50)
   const [range , setRange]= useState('16')
@@ -10,6 +15,10 @@ function WordCounter() {
 
   function onChangeLimit(e) {
     setLimit(e.target.value)
+    dispatch({
+      type: WORD_COUNT_UPDATE,
+      payload: e.target.value
+    })
   }
   function onChange(event) {
       let count  = countWords(event.target.value);

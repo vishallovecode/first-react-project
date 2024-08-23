@@ -7,7 +7,7 @@ import { AppContext } from "../../appContext";
 function  ThemeChanger (props) {
 
 const  {state , dispatch} = useContext(AppContext);
-
+console.log(state , 'aaa ga hun me')
   const [styles , setStyle]= useState({
     backgroundColor:'',
     borderColor: '',
