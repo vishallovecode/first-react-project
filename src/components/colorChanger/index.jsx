@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "../button";
 
 import  './style.css'
+import { AppContext } from "../../appContext";
 
 function  ThemeChanger (props) {
+
+const  {state , dispatch} = useContext(AppContext);
+
   const [styles , setStyle]= useState({
     backgroundColor:'',
     borderColor: '',
     color: ''
   })
+
 
   const [inputValues , setInputValues]= useState({
     bg:'',
@@ -38,16 +43,29 @@ function  ThemeChanger (props) {
     const updatedStyle = {...styles};
     updatedStyle.backgroundColor =  inputValues.bg
     setStyle(updatedStyle)
+
+    dispatch({
+      type: 'THEME_CHANGER',
+      payload: {backgroundColor: inputValues.bg}
+    })
   }
   function borderChange(){
     const updatedStyle = {...styles};
     updatedStyle.borderColor =  inputValues.border
     setStyle(updatedStyle)
+    dispatch({
+      type: 'THEME_CHANGER',
+      payload: {borderColor: inputValues.border}
+    })
   }
   function colorChange(){
     const updatedStyle = {...styles};
     updatedStyle.color =  inputValues.color;
     setStyle(updatedStyle)
+    dispatch({
+      type: 'THEME_CHANGER',
+      payload: {borderColor: inputValues.color}
+    })
   }
   return  (
     <div className="container">

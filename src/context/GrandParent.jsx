@@ -17,6 +17,4 @@ function GrandParent() {
 </MyContext.Provider>
   )
 }
-
-
 export default GrandParent
