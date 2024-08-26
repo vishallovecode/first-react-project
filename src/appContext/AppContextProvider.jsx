@@ -14,3 +14,10 @@ export const AppContextProvider = (props)=>{
     </AppContext.Provider>
   )
 }
+
+// context
+// for reference dummy
+// useReducer(CALLBACK , initialState) {
+//   CALLBACK(state , action)
+//   return  [state , dispatch]
+// }

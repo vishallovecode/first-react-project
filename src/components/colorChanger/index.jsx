@@ -6,7 +6,7 @@ import { AppContext } from "../../appContext";
 
 function  ThemeChanger (props) {
 
-const  {state , dispatch} = useContext(AppContext);
+const  {state , dispatch} = useContext(AppContext); // {state , dispatch}
 console.log(state , 'aaa ga hun me')
   const [styles , setStyle]= useState({
     backgroundColor:'',
@@ -43,7 +43,6 @@ console.log(state , 'aaa ga hun me')
     const updatedStyle = {...styles};
     updatedStyle.backgroundColor =  inputValues.bg
     setStyle(updatedStyle)
-
     dispatch({
       type: 'THEME_CHANGER',
       payload: {backgroundColor: inputValues.bg}
