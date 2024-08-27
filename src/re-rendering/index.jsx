@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 
 function ReRender (props) {
   let [count , setCount] = useState(0)
-
   function increment (){
     try {
       setCount(count+2)  //  setCount(2) // count  = 0
@@ -29,6 +28,7 @@ function ReRender (props) {
   //   setCount(count ++ ) // 7  // state === 7 
   //   // setCount(++count )  // infinite rendering
   // } , [count])
+
 
   return (
     <h2>

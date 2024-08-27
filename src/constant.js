@@ -26,5 +26,6 @@ export const headerConstant = [
   {name: 'ClassComponent', link:'/class-component'},
   {name: 'DynamicRouting', link:'/productlisting'},
   {name: 'React Context', link:'/react-context'},
-  {name: 'Re-Render', link:'/re-render'}
+  {name: 'Re-Render', link:'/re-render'},
+  {name: 'UseRef', link:'/use-ref'}
 ]
