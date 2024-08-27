@@ -5,27 +5,34 @@ function ReRender (props) {
 
   function increment (){
     try {
-      setCount(count++) //  0
-      setCount(++count) // 2
-      setCount(++count) // 3
-      setCount(count++) // 3
-      setCount(++count) // 5
-      setCount(++count) //  6
-      setCount(count++) // 6
-      console.log(count) //  7
+      setCount(count+2)  //  setCount(2) // count  = 0
+      console.log(count) // 0 // count =0 
+      setCount(++count)   // setCount(1) // count =1
+      console.log(count)
+      ++count // count =2
+      setCount(count)  // setCount(2)
+      console.log(count)
+      setCount(count +2 )  // setCount(2+2) // 4  // count =2
+      console.log(count)
+      setCount(++count)    // setCount(3) //  count  = 3
+      console.log(count)
+      setCount(++count)  // setCount(4) // count  =4
+      console.log(count)
+      setCount(count +2)    // setCount(6) // count  = 4 
+      console.log(count) 
     } catch(err){
       console.error('error::' , err)
     }
   }
 
-  useEffect(()=>{
-    setCount(count ++ ) // 7  // state === 7
-    // setCount(++ count )  // infinite rendering
-  } , [count])
+  // useEffect(()=>{
+  //   setCount(count ++ ) // 7  // state === 7 
+  //   // setCount(++count )  // infinite rendering
+  // } , [count])
 
   return (
     <h2>
-      {count}
+      {count} 
       <div>
       <button onClick={increment}>Increase</button>
       </div>
