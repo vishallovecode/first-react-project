@@ -30,6 +30,7 @@ import SingleProductDetails from './components/productdetails';
 import NotFound from './components/not-found';
 import GrandParent from './context/GrandParent';
 import { AppContextProvider } from './appContext/AppContextProvider';
+import ReRender from './re-rendering';
 
 // receive  file 
 function App() {
@@ -71,6 +72,7 @@ function App() {
         {/* Dynamic Routing */}
         <Route path='products/:productId' element= {<SingleProductDetails/>}/>
         <Route path='/react-context' element={<GrandParent/>}/>
+        <Route path='/re-render' element= {<ReRender/>}/>
         <Route path='*' element= {<NotFound/>}/>
 
 

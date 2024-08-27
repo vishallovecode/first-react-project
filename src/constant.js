@@ -25,5 +25,6 @@ export const headerConstant = [
   {name: 'LifeCycleMethod', link:'/lifecycle'},
   {name: 'ClassComponent', link:'/class-component'},
   {name: 'DynamicRouting', link:'/productlisting'},
-  {name: 'React Context', link:'/react-context'}
+  {name: 'React Context', link:'/react-context'},
+  {name: 'Re-Render', link:'/re-render'}
 ]
