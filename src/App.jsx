@@ -34,6 +34,7 @@ import ReRender from './re-rendering';
 import UseRefExample from './re-rendering/UseRef';
 import FowaredRefExample from './forwardRef';
 import Modal from './portal';
+import Optimization from './optimization';
 
 // receive  file 
 function App() {
@@ -79,6 +80,7 @@ function App() {
         <Route path='/use-ref' element= {<UseRefExample/>}/>
         <Route path='/forward-ref' element= {<FowaredRefExample/>}/>
         <Route path='/modal' element= {<Modal/>}/>
+        <Route path='/optimization' element= {<Optimization/>}/>
         <Route path='*' element= {<NotFound/>}/>
 
 

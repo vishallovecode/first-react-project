@@ -29,5 +29,5 @@ export const headerConstant = [
   {name: 'Re-Render', link:'/re-render'},
   {name: 'ForwardRef', link:'/forward-ref'},
   {name: 'UseRef', link:'/use-ref'},
-  {name: 'modal', link:'/modal'}
+{name: 'Optimization', link:'/optimization'}
 ]
