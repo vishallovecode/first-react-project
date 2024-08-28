@@ -33,6 +33,7 @@ import { AppContextProvider } from './appContext/AppContextProvider';
 import ReRender from './re-rendering';
 import UseRefExample from './re-rendering/UseRef';
 import FowaredRefExample from './forwardRef';
+import Modal from './portal';
 
 // receive  file 
 function App() {
@@ -77,7 +78,7 @@ function App() {
         <Route path='/re-render' element= {<ReRender/>}/>
         <Route path='/use-ref' element= {<UseRefExample/>}/>
         <Route path='/forward-ref' element= {<FowaredRefExample/>}/>
-
+        <Route path='/modal' element= {<Modal/>}/>
         <Route path='*' element= {<NotFound/>}/>
 
 

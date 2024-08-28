@@ -28,5 +28,6 @@ export const headerConstant = [
   {name: 'React Context', link:'/react-context'},
   {name: 'Re-Render', link:'/re-render'},
   {name: 'ForwardRef', link:'/forward-ref'},
-  {name: 'UseRef', link:'/use-ref'}
+  {name: 'UseRef', link:'/use-ref'},
+  {name: 'modal', link:'/modal'}
 ]

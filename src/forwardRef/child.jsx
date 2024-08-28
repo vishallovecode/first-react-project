@@ -1,16 +1,29 @@
 import { forwardRef } from "react";
 
-const Child  = forwardRef(function  (props , ref) {
-  function handleClick (){
-    ref.current.textContent = 'Ham ho gaye g'
+const Child  = forwardRef(
+  function  (props , ref) {
+    function handleClick (){
+      ref.current.textContent = 'Ham ho gaye g'
+    }
+    return  (
+      <div ref={props.ref}>
+       <span>Hey I am vishal Sharma</span> 
+       <button onClick={handleClick}>Click Me</button>
+      </div>
+    )
   }
-  return  (
-    <div ref={props.ref}>
-     <span>Hey I am vishal Sharma</span> 
-     <button onClick={handleClick}>Click Me</button>
-    </div>
-  )
-})
+)
+// function Child  (props) {
+//   function handleClick (){
+//     ref.current.textContent = 'Ham ho gaye g'
+//   }
+//   return  (
+//     <div ref={props.ref}>
+//      <span>Hey I am vishal Sharma</span> 
+//      <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   )
+// }
 
 export default Child;
 
@@ -19,3 +32,11 @@ export default Child;
 // const Child = forwardRef((props , ref)=>{
 
 // })
+
+
+// const Child = forwardRef(function (props , ref) {
+
+// })
+
+
+
