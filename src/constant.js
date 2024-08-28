@@ -27,5 +27,6 @@ export const headerConstant = [
   {name: 'DynamicRouting', link:'/productlisting'},
   {name: 'React Context', link:'/react-context'},
   {name: 'Re-Render', link:'/re-render'},
+  {name: 'ForwardRef', link:'/forward-ref'},
   {name: 'UseRef', link:'/use-ref'}
 ]
