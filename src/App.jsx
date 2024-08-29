@@ -35,10 +35,12 @@ import UseRefExample from './re-rendering/UseRef';
 import FowaredRefExample from './forwardRef';
 import Modal from './portal';
 import Optimization from './optimization';
+import useFetch from './custom-hook';
 
 // receive  file 
 function App() {
-
+  const [data, loading, error] = useFetch("https://dummyjson.com/products");
+  console.log(loading , data , error)
   useEffect(()=>{
     console.log('I will get call only once..... app')
   } ,[])

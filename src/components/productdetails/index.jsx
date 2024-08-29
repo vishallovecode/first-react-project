@@ -39,3 +39,8 @@ const SingleProductDetails  = () => {
 }
 
 export default SingleProductDetails;
+
+
+
+
+// hook can be call 
