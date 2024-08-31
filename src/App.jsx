@@ -36,6 +36,7 @@ import FowaredRefExample from './forwardRef';
 import Modal from './portal';
 import Optimization from './optimization';
 import useFetch from './custom-hook';
+import { Container, InputBase } from '@mui/material';
 
 // receive  file 
 function App() {
@@ -47,8 +48,9 @@ function App() {
 
   return (
   <AppContextProvider>
-    <div className="App">
+    <div className="App flex">
       <Header/>
+  
       <Routes>
         <Route path='/square' element= {<Sqaure/>}/>
         <Route path='/Card' element= {<Card/>}/>
@@ -112,3 +114,4 @@ props.children */}
 
 
 
+// usePrevious
